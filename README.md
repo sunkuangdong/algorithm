@@ -25,3 +25,14 @@
 ##### 计数排序
 
 * `index6` 
+
+##### 数据结构队列 先进先出
+* 例子在 scr文件里面 运行查看例子
+```
+parcel src\index.html
+```
+
+* 没有parcel请先下载 
+```
+yarn global add parcel
+```
