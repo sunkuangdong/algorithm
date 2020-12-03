@@ -43,7 +43,7 @@ parcel src\idnex1.html
 parcel src\tree.html
 ```
 
-* 没有parcel请先下载 
+##### 没有parcel请先下载 
 ```
 yarn global add parcel
 ```
