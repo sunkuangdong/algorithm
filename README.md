@@ -28,13 +28,19 @@
 
 ##### 数据结构队列 先进先出
 ##### 数据结构栈   先进后出
-* 队列例子在 scr/idnex.html文件里面 运行查看例子
-##### 数据结构链表
-* 例子在 scr/idnex1.html文件里面 运行查看例子
-##### 数据结构树
-* 例子在 scr/tree.html文件里面 运行查看例子
+* 队列例子在 scr\idnex.html文件里面 运行查看例子
 ```
 parcel src\index.html
+```
+##### 数据结构链表
+* 例子在 scr\idnex1.html文件里面 运行查看例子
+```
+parcel src\idnex1.html
+```
+##### 数据结构树
+* 例子在 scr\tree.html文件里面 运行查看例子
+```
+parcel src\tree.html
 ```
 
 * 没有parcel请先下载 
