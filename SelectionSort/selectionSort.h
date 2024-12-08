@@ -3,7 +3,8 @@
 #include <algorithm>
 using namespace std;
 
-void selectionSort(int arr[], int n)
+template <typename T>
+void selectionSort(T arr[], int n)
 {
     for (int i = 0; i < n; i++)
     {
