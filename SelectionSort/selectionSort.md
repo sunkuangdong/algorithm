@@ -30,3 +30,22 @@ for (int i = 0; i < arrSize; i++)
 }
 
 ```
+
+Second, we need to find the index of the minimum value, so we need to use a variable to store the minimum value. Then, we need to swap the smallest value with the value at the minimum index position.
+
+```
+
+for (int i = 0; i < arrSize; i++)
+{
+    int minimum = i;
+    for (int j = i+1; j < arrSize; j++)
+    {
+        if(arr[i] < arr[minimum])
+        {
+            minimum = i;
+        }
+    }
+    swap(arr[i], arr[minimum]);
+}
+
+```

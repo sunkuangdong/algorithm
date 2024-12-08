@@ -12,7 +12,7 @@ int main()
     int * arr = SortTestHelper::generateRandomArray(n, 0, n);
     // selection sort
     // selectionSort(arr, n);
- // SortTestHelper::printArray(arr, n);
+    // SortTestHelper::printArray(arr, n);
     
     SortTestHelper::testSort("Selection Sort", selectionSort, arr, n);
     delete[] arr;
