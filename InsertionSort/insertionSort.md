@@ -22,7 +22,7 @@ Therefore, the insertion sort algorithm use a nested loop approch to achieve thi
 
 for (int i = 0; i < arrSize; i++)
 {
-    for (int j = i; j >= 0; j--)
+    for (int j = i; j > 0; j--)
     {
         // compare and swap
     }
@@ -36,11 +36,11 @@ Second, we need to compare the item at the back with the each one in front, if t
 
 for (int i = 0; i < arrSize; i++)
 {
-    for (int j = i; j >= 0; j--)
+    for (int j = i; j > 0; j--)
     {
-        if(arr[j] < arr[i])
+        if(arr[j] < arr[j-1])
         {
-           swap(arr[i], arr[j]);
+           swap(arr[j], arr[j-1]);
         }
     }
 }
