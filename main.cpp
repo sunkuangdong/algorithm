@@ -1,6 +1,7 @@
 #include "SortTestHelper.h"
 #include "SelectionSort/selectionSort.h"
 #include "InsertionSort/insertionSort.h"
+#include "InsertionSort/improveInsertionSort.h"
 
 #include <iostream> 
 #include <string>
@@ -19,7 +20,12 @@ int main()
 
     // insertionSort(arr, n);
     // SortTestHelper::printArray(arr, n);
-    // SortTestHelper::testSort("Selection Sort", insertionSort, arr, n);
+    // SortTestHelper::testSort("insertion Sort", insertionSort, arr, n);
+
+    // improveInsertionSort(arr, n);
+    // SortTestHelper::printArray(arr, n);
+    // SortTestHelper::testSort("Improve InsertionSort", improveInsertionSort, arr, n);
+
     delete[] arr;
     return 0;
 }

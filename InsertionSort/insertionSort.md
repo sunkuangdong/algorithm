@@ -20,7 +20,7 @@ Therefore, the insertion sort algorithm use a nested loop approch to achieve thi
 
 ```
 
-for (int i = 0; i < arrSize; i++)
+for (int i = 1; i < arrSize; i++)
 {
     for (int j = i; j > 0; j--)
     {
@@ -34,7 +34,7 @@ Second, we need to compare the item at the back with the each one in front, if t
 
 ```
 
-for (int i = 0; i < arrSize; i++)
+for (int i = 1; i < arrSize; i++)
 {
     for (int j = i; j > 0; j--)
     {
@@ -45,4 +45,28 @@ for (int i = 0; i < arrSize; i++)
     }
 }
 
+```
+
+# Improve insertion sort
+I often use swaps, it is not an efficient method for better performance. So Let us improve insertion sort.
+
+## Logic
+We do not need many times to swap in array. instead, we can compare current item with previous item. If current item is smaller than previous one, we move previous item to the current index and then compare the next item.
+
+```
+for(int i = 1; i < arrSize; i++)
+{
+    int number = arr[i];
+    int j;
+    for(j = i; j > 0; j--)
+    {
+        if(arr[j - 1] > number)
+        {
+            arr[j] = arr[j-1];
+        }else{
+            break;
+        }
+    }
+    arr[j] = number;
+}
 ```
