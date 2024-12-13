@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-    int n = 1000;
+    int n = 100000;
     int * arr = SortTestHelper::generateRandomArray(n, 0, n);
     // selection sort
     // selectionSort(arr, n);
@@ -27,8 +27,8 @@ int main()
     // SortTestHelper::printArray(arr, n);
     // SortTestHelper::testSort("Improve InsertionSort", improveInsertionSort, arr, n);
 
-    bubbleSort(arr, n);
-    SortTestHelper::printArray(arr, n);
+    // bubbleSort(arr, n);
+    // SortTestHelper::printArray(arr, n);
     // SortTestHelper::testSort("Bubble Sort", bubbleSort, arr, n);
     delete[] arr;
     return 0;
