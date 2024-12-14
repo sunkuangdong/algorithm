@@ -6,6 +6,8 @@ Bubble sort is a method for sorting an array. Like boil water, the largest eleme
 
 We need to compare each element. If an elemet is bigger than the element behind it, we swap these two elements. If an element is smaller than the element behind it, we move to the next pair and compare it with the next element.
 
+![alt text](Bubble_Sort.gif)
+
 ## How can we abstract the logic to implement this process?
 
 First, we must compare each element with behind elememt.

@@ -3,6 +3,7 @@
 #include "InsertionSort/insertionSort.h"
 #include "InsertionSort/improveInsertionSort.h"
 #include "BubbleSort/bubbleSort.h"
+#include "MergeSort/mergeSort.h"
 
 #include <iostream> 
 #include <string>
@@ -30,6 +31,11 @@ int main()
     // bubbleSort(arr, n);
     // SortTestHelper::printArray(arr, n);
     // SortTestHelper::testSort("Bubble Sort", bubbleSort, arr, n);
+
+    // mergeSort(arr, n);
+    // SortTestHelper::printArray(arr, n);
+    // SortTestHelper::testSort("Merge Sort", mergeSort, arr, n);
+
     delete[] arr;
     return 0;
 }
