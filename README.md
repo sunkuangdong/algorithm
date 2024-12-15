@@ -1,4 +1,4 @@
-#Just for learn and consider algorithm
+# Just for learn and consider algorithm
 
 # Time complexity O(n²)
 ## bubble sort 
