@@ -1,18 +1,19 @@
+#include <iostream> 
+#include <string>
+#include <algorithm>
+
 #include "SortTestHelper.h"
 #include "SelectionSort/selectionSort.h"
 #include "InsertionSort/insertionSort.h"
 #include "InsertionSort/improveInsertionSort.h"
 #include "BubbleSort/bubbleSort.h"
 #include "MergeSort/mergeSort.h"
-
-#include <iostream> 
-#include <string>
-#include <algorithm>
+#include "MergeSort/mergeSortBottomToTop.h"
 using namespace std;
 
 int main()
 {
-    int n = 100000;
+    int n = 1000000;
     int * arr = SortTestHelper::generateRandomArray(n, 0, n);
     // selection sort
     // selectionSort(arr, n);
@@ -35,6 +36,10 @@ int main()
     // mergeSort(arr, n);
     // SortTestHelper::printArray(arr, n);
     // SortTestHelper::testSort("Merge Sort", mergeSort, arr, n);
+
+    // mergeSortBottomToTop(arr, n);
+    // SortTestHelper::printArray(arr, n);
+    SortTestHelper::testSort("Merge Sort Bottom To Top", mergeSortBottomToTop, arr, n);
 
     delete[] arr;
     return 0;
