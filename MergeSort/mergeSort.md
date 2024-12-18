@@ -1,4 +1,4 @@
-# What is the merge sort?
+# What is the merge sort algorithm?
 
 Split an array continuously into two halves until it can no longer divided. Then merge the array back from individual elements into a complete array, sorting during the merging processing.
 

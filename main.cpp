@@ -39,7 +39,7 @@ int main()
 
     // mergeSortBottomToTop(arr, n);
     // SortTestHelper::printArray(arr, n);
-    SortTestHelper::testSort("Merge Sort Bottom To Top", mergeSortBottomToTop, arr, n);
+    // SortTestHelper::testSort("Merge Sort Bottom To Top", mergeSortBottomToTop, arr, n);
 
     delete[] arr;
     return 0;
