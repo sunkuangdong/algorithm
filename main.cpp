@@ -9,6 +9,8 @@
 #include "BubbleSort/bubbleSort.h"
 #include "MergeSort/mergeSort.h"
 #include "MergeSort/mergeSortBottomToTop.h"
+#include "QuickSort/quickSort.h"
+
 using namespace std;
 
 int main()
@@ -40,6 +42,10 @@ int main()
     // mergeSortBottomToTop(arr, n);
     // SortTestHelper::printArray(arr, n);
     // SortTestHelper::testSort("Merge Sort Bottom To Top", mergeSortBottomToTop, arr, n);
+
+    // quickSort(arr, n);
+    // SortTestHelper::printArray(arr, n);
+    // SortTestHelper::testSort("Quick Sort", quickSort, arr, n);
 
     delete[] arr;
     return 0;

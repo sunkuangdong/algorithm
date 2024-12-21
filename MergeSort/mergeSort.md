@@ -2,6 +2,8 @@
 
 Split an array continuously into two halves until it can no longer divided. Then merge the array back from individual elements into a complete array, sorting during the merging processing.
 
+![alt text](Merge_Sort.gif)
+
 ## Logic
 
 First, we divided an array into two halves and round up to get the middle index of the array. We take the portion from index 0 to the middle index as the left part, and from the middle index to the end of the array as the right of part. This process is repeated until the array can no longer be divided.
@@ -61,5 +63,3 @@ void __merge(T arr[], int l, int mid, int r)
     }
 }
 ```
-
-![alt text](Merge_Sort.gif)
