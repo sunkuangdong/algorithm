@@ -31,7 +31,7 @@ template <typename T>
 void __quickSort(T arr[], int l, int r) {
     if(r - l <= 15) 
     {
-        insertionSort(arr, l, r);
+        insertionSort(arr, r-l+1);
         return;
     };
 

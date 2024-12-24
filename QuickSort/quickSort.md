@@ -14,3 +14,8 @@ Because we need to compare the first element with each element in the array. Onc
 
 Finally, the first element is swapped with the element at the pivot index.
 
+## optimize 
+
+1. Random pivot
+2. Insertion sort for small array
+3. Two pointers for partition
