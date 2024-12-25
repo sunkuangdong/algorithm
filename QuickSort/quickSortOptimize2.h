@@ -1,12 +1,10 @@
 #include <iostream>
 #include <algorithm>
 
-#include "../InsertionSort/insertionSort.h"
-
 using namespace std;
 
 template <typename T>
-int __partition(T arr[], int l, int r)
+int __partition2(T arr[], int l, int r)
 {
     swap(arr[l], arr[rand()%(r-l+1) + l]);
     T v = arr[l];
@@ -15,7 +13,7 @@ int __partition(T arr[], int l, int r)
     while (true)
     {
        while (i <=r && arr[i] < v) i++;
-       while (j >= l+1 && arr[j] > v) j++;
+       while (j >= l+1 && arr[j] > v) j--;
        if(i > j) break;
        swap(arr[i], arr[j]);
        i++;
@@ -31,11 +29,11 @@ template <typename T>
 void __quickSortOptimize2(T arr[], int l, int r) {
     if(r-l<=15)
     {
-        insertionSort(arr, r-l+1);
+        insertionSort(arr, l, r);
         return;
     }
 
-    int n = __partition(arr, l, r);
+    int n = __partition2(arr, l, r);
     __quickSortOptimize2(arr, l, n-1);
     __quickSortOptimize2(arr, n+1, r);
 }

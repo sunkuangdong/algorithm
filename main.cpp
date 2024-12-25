@@ -11,6 +11,8 @@
 #include "MergeSort/mergeSortBottomToTop.h"
 #include "QuickSort/quickSort.h"
 #include "QuickSort/quickSortOptimize.h"
+#include "QuickSort/quickSortOptimize2.h"
+#include "QuickSort/quickSortOptimize3.h"
 
 
 using namespace std;
@@ -48,6 +50,18 @@ int main()
     // quickSort(arr, n);
     // SortTestHelper::printArray(arr, n);
     // SortTestHelper::testSort("Quick Sort", quickSort, arr, n);
+
+    // quickSortOptimize(arr, n);
+    // SortTestHelper::printArray(arr, n);
+    // SortTestHelper::testSort("Quick Sort Optimize", quickSortOptimize, arr, n);
+
+    // quickSortOptimize2(arr, n);
+    // SortTestHelper::printArray(arr, n);
+    // SortTestHelper::testSort("Quick Sort Optimize 2", quickSortOptimize2, arr, n);
+
+    // quickSortOptimize3(arr, n);
+    // SortTestHelper::printArray(arr, n);
+    // SortTestHelper::testSort("Quick Sort Optimize 3", quickSortOptimize3, arr, n);
 
     delete[] arr;
     return 0;
