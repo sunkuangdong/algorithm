@@ -13,6 +13,7 @@
 #include "QuickSort/quickSortOptimize.h"
 #include "QuickSort/quickSortOptimize2.h"
 #include "QuickSort/quickSortOptimize3.h"
+#include "HeapSort/heapSort.h"
 
 
 using namespace std;
@@ -63,6 +64,16 @@ int main()
     // SortTestHelper::printArray(arr, n);
     // SortTestHelper::testSort("Quick Sort Optimize 3", quickSortOptimize3, arr, n);
 
+    MaxHeap<int> maxheap = MaxHeap<int>(100);
+    cout<<maxheap.size()<<endl;
+
+    srand(time(NULL));
+    for (int i = 0; i < 15; i++)
+    {
+        maxheap.insert(rand()%100);
+    }
+
+    maxheap.testPrint();
     delete[] arr;
     return 0;
 }
