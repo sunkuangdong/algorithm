@@ -11,6 +11,10 @@ https://github.com/sunkuangdong/algorithm/blob/main/SelectionSort/selectionSort.
 # Time complexity O(n log n)
 ## merge sort
 https://github.com/sunkuangdong/algorithm/blob/main/MergeSort/mergeSort.h
+## quick sort
+https://github.com/sunkuangdong/algorithm/blob/main/QuickSort/quickSort.h
+## heap sort
+https://github.com/sunkuangdong/algorithm/blob/main/HeapSort/heapSort.h
 
 `Notice: To see the efficiency of these codes, run "main.cpp".`
 
