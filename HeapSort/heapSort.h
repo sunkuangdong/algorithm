@@ -21,7 +21,18 @@ class MaxHeap {
                 swap(data[k], data[k/2]);
                 k /= 2;
             }
-            
+        }
+
+        void shiftDown(int i)
+        {
+            while (2*i<=count)
+            {
+                int j = 2 * i;
+                if(j+1 <= count && data[j] < data[j+1]) j+=1;
+                if(data[i] >= data[j]) break;
+                swap(data[i], data[j]);
+                i = j;
+            }
         }
 
         void putBranchInLine( string &line, int index_cur_level, int cur_tree_width){
@@ -35,6 +46,7 @@ class MaxHeap {
             line[offset_left + 1] = '/';
             line[offset_right + 0] = '\\';
         }
+
         void putNumberInLine( int num, string &line, int index_cur_level, int cur_tree_width, bool isLeft){
             int sub_tree_width = (cur_tree_width - 1) / 2;
             int offset = index_cur_level * (cur_tree_width+1) + sub_tree_width;
@@ -50,6 +62,7 @@ class MaxHeap {
                     line[offset + 1] = '0' + num;
             }
         }
+
     public:
         MaxHeap(int capacity)
         {
@@ -80,6 +93,17 @@ class MaxHeap {
             count++;
             shiftUp(count);
         }
+
+        Item extractMax()
+        {
+            assert(count > 0);
+            Item ret = data[1];
+            swap(data[1], data[count]);
+            count --;
+            shiftDown(1);
+            return ret;
+        }
+
         void testPrint()
         {
 
@@ -139,6 +163,5 @@ class MaxHeap {
                 cur_tree_max_level_number /= 2;
             }
         }
-        
 };
 

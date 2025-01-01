@@ -1,4 +1,5 @@
 ## Max Heap
+[heapSort.h](../HeapSort/heapSort.h)
 ## What is a max heap? 
 
 A max heap is a complate binary tree where the value of each node is greater than or equal to the values of its children nodes.
@@ -88,4 +89,44 @@ void shiftUp(int k)
 
 `notice: If you want to see complete code, please click the link below.`
 
-[heapSort.h](../HeapSort/heapSort.h)
+## shift Down
+
+We just shift down the first element of an array to make it a max heap.
+
+#### First, shift down the element
+
+We remove the first element of the heap and put the last element of the heap to the first position.
+
+```C++
+Item extractMax()
+{
+    assert(count > 1);
+    Item ret = data[1];
+    swap(data[1], data[count]);
+    count --;
+    shiftDown(1);
+    return ret;
+}
+```
+
+#### Second, shift down the element
+
+If the right element is less than the left element, swap the element with the left element.
+
+If the right element is greater than the left element, swap the element with the right element.
+
+Repeat the process until the element is in the correct position.
+
+```C++
+void shiftDown(int k)
+{
+    while (2*k <= count)
+    {
+        int j = 2 * k;
+        if(j+1 <= count && data[j] < data[j+1]) j+=1;
+        if(data[k] >= data[j]) break;
+        swap(data[k], data[j]);
+        k = j;
+    }
+}
+```

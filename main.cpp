@@ -64,16 +64,39 @@ int main()
     // SortTestHelper::printArray(arr, n);
     // SortTestHelper::testSort("Quick Sort Optimize 3", quickSortOptimize3, arr, n);
 
-    MaxHeap<int> maxheap = MaxHeap<int>(100);
-    cout<<maxheap.size()<<endl;
-
-    srand(time(NULL));
-    for (int i = 0; i < 15; i++)
+    // test for insert
+    /*
     {
-        maxheap.insert(rand()%100);
-    }
+        MaxHeap<int> maxheap = MaxHeap<int>(100);
+        cout<<maxheap.size()<<endl;
 
-    maxheap.testPrint();
-    delete[] arr;
+        srand(time(NULL));
+        for (int i = 0; i < 15; i++)
+        {
+            maxheap.insert(rand()%100);
+        }
+        delete[] arr;
+    }
+    */
+
+    // test for shifft down
+    /*
+    {
+     MaxHeap<int> maxheap = MaxHeap<int>(100);
+        cout<<maxheap.size()<<endl;
+
+        srand(time(NULL));
+        for (int i = 0; i < 15; i++)
+        {
+            maxheap.insert(rand()%100);
+        }
+        while (!maxheap.isEmpty())
+        {
+            printf("%d ", maxheap.extractMax());
+        }
+        delete[] arr;
+    }
+    */
+
     return 0;
 }
