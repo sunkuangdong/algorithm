@@ -82,7 +82,7 @@ int main()
     // test for shifft down
     /*
     {
-     MaxHeap<int> maxheap = MaxHeap<int>(100);
+        MaxHeap<int> maxheap = MaxHeap<int>(100);
         cout<<maxheap.size()<<endl;
 
         srand(time(NULL));
@@ -98,5 +98,6 @@ int main()
     }
     */
 
+    SortTestHelper::testSort("Heap Sort heapSort1", heapSort1, arr, n);
     return 0;
 }

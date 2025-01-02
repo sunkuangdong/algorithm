@@ -88,7 +88,7 @@ class MaxHeap {
 
         void insert(Item item)
         {
-            assert((count + 1)<capacity);
+            assert((count + 1)<=capacity);
             data[count + 1] = item;
             count++;
             shiftUp(count);
@@ -103,6 +103,8 @@ class MaxHeap {
             shiftDown(1);
             return ret;
         }
+
+        
 
         void testPrint()
         {
@@ -165,3 +167,18 @@ class MaxHeap {
         }
 };
 
+template <typename T>
+void heapSort1(T arr[], int n)
+{
+    MaxHeap <T> maxHeap = MaxHeap<T>(n);
+
+    for (int i = 0; i < n; i++)
+    {
+        maxHeap.insert(arr[i]);
+    }
+
+    for (int j = n-1; j >= 0; j--)
+    {
+        arr[j] = maxHeap.extractMax();
+    }
+}

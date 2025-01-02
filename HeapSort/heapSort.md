@@ -130,3 +130,22 @@ void shiftDown(int k)
     }
 }
 ```
+
+## Heap Sort
+
+We use the max heap to sort the array.
+
+```C++
+void heapSort(Item arr[], int n)
+{
+    MaxHeap<Item> maxheap = MaxHeap<Item>(n);
+    for (int i = 0; i < n; i++)
+    {
+        maxheap.insert(arr[i]);
+    }
+    for (int i = n-1; i >= 0; i--)
+    {
+        arr[i] = maxheap.extractMax();
+    }
+}
+```
