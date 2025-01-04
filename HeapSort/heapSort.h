@@ -71,7 +71,7 @@ class MaxHeap {
             this->capacity = capacity;
         }
 
-        // heapfy
+        // Heapify
         MaxHeap(Item arr[], int n){
             data = new Item[n+1];
             capacity = n;
