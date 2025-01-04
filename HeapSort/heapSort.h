@@ -71,6 +71,23 @@ class MaxHeap {
             this->capacity = capacity;
         }
 
+        // heapfy
+        MaxHeap(Item arr[], int n){
+            data = new Item[n+1];
+            capacity = n;
+            for (int i = 0; i < n; i++)
+            {
+                data[i+1] = arr[i];
+            }
+            count = n;
+
+            for (int i = count / 2; i >= 1; i--)
+            {
+                shiftDown(i);
+            }
+            
+        }
+
         ~MaxHeap()
         {
             delete [] data;
@@ -103,8 +120,6 @@ class MaxHeap {
             shiftDown(1);
             return ret;
         }
-
-        
 
         void testPrint()
         {
@@ -180,5 +195,17 @@ void heapSort1(T arr[], int n)
     for (int j = n-1; j >= 0; j--)
     {
         arr[j] = maxHeap.extractMax();
+    }
+}
+
+// Heapify
+template <typename T>
+void heapSort2(T arr[], int n)
+{
+    MaxHeap <T> maxHeap = MaxHeap<T>(arr, n);
+
+    for (int i = n-1; i >= 0; i--)
+    {
+        arr[i] = maxHeap.extractMax();
     }
 }

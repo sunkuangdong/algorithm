@@ -98,6 +98,10 @@ int main()
     }
     */
 
+    // heapSort1(arr, n);
+    // SortTestHelper::printArray(arr, n);
     SortTestHelper::testSort("Heap Sort heapSort1", heapSort1, arr, n);
+
+    // SortTestHelper::testSort("Heap Sort heapSort2", heapSort2, arr, n);
     return 0;
 }
