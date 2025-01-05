@@ -149,3 +149,53 @@ void heapSort(Item arr[], int n)
     }
 }
 ```
+
+## Heapify
+
+We can build a max heap in O(n) time complexity.
+
+```C++
+MaxHeap(Item arr[], int n)
+{
+    data = new Item[n+1];
+    capacity = n;
+
+    for (int i = 0; i < n; i++)
+    {
+        data[i+1] = arr[i];
+    }
+    count = n;
+
+    for (int i = count / 2; i >= 1; i--)
+    {
+        shiftDown(i);
+    }
+}
+```
+
+## In-place heap sort
+
+We need to swap the first element with the last element of the heap, and then shift down the first element.
+
+Repeat the process until the heap is empty.
+
+But we need to use 0 as the root node, so we need to change the role of code of shiftDown.
+
+The left child of the node at index i is at index 2i+1, and the right child is at index 2i+2.
+
+The parent of the node at index i is at index (i-1)/2.
+
+```C++
+void heapSort_InPlace(Item arr[], int n)
+{
+    for (int i = n-1; i >= 0; i--)
+    {
+        swap(arr[0], arr[i]);
+        shiftDown(0, i);
+    }
+}
+```
+
+`notice: If you want to see complete code, please click the link below.`
+
+[heapSort.h](../HeapSort/heapSort.h)

@@ -100,6 +100,7 @@ int main()
 
     // SortTestHelper::testSort("Heap Sort heapSort1", heapSort1, arr, n);
 
-    // SortTestHelper::testSort("Heap Sort heapSort2", heapSort2, arr, n);
+    // SortTestHelper::testSort("Heap Sort heapSort_heapify", heapSort_heapify, arr, n);
+    SortTestHelper::testSort("Heap Sort heapSort_InPlace", heapSort_InPlace, arr, n);
     return 0;
 }
