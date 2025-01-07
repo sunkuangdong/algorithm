@@ -15,6 +15,10 @@ https://github.com/sunkuangdong/algorithm/blob/main/MergeSort/mergeSort.h
 https://github.com/sunkuangdong/algorithm/blob/main/QuickSort/quickSort.h
 ## heap sort
 https://github.com/sunkuangdong/algorithm/blob/main/HeapSort/heapSort.h
+## heap sort in place
+https://github.com/sunkuangdong/algorithm/blob/main/HeapSort/heapSort.h
+## heap sort heapify
+https://github.com/sunkuangdong/algorithm/blob/main/HeapSort/heapSort.h
 
 `Notice: To see the efficiency of these codes, run "main.cpp".`
 
